@@ -2,5 +2,16 @@ let par = "Lorem ipsum dolor sit amet consectetur adipiscing elit Curabitur eget
 let counts = {};
 
 // your code here
+let parWithoutSpaces = par.replace(/ /g, "");
+let parArrayLetters = parWithoutSpaces.split("");
+
+for(let i = 0; i < parArrayLetters.length; i++) {
+    const letter = parArrayLetters[i].toLowerCase();
+    if (letter in counts) {
+        counts[letter] = counts[letter] + 1;
+    } else {
+        counts[letter] = 1
+    }
+}
 
 console.log(counts);

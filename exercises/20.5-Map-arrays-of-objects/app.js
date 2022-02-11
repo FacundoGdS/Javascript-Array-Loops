@@ -11,3 +11,18 @@ let simplifier = function(person){
 };
 
 console.log(people.map(simplifier));
+
+const calculateAge = (date) => {
+	var diff = Date.now() - date.getTime();
+    var age = new Date(diff); 
+  
+    return Math.abs(age.getUTCFullYear() - 1970);
+}
+
+const presentation = (person) => {
+	let age = calculateAge(person.birthDate);
+	return `Hello, my name is ${person.name} and I am ${age} years old`;
+}
+
+console.log(people.map(presentation));
+
