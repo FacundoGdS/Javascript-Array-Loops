@@ -5,7 +5,7 @@ let mixtype = [];
 
 const newArrayTypes = (array1, array2) => {
     for (let i = 0; i < array1.length; i++ ) {
-        array2.push(typeof mix[i]);
+        array2.push(typeof array1[i]);
     }
     console.log(array2);
 }
